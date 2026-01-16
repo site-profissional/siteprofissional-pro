@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Criação de site profissional para nutricionistas. Atraia mais pacientes, seja encontrada no Google e transmita confiança com um site moderno e focado em conversão.">
+    <meta name="keywords" content="site para nutricionista, site profissional para nutricionista, criação de site para nutricionista, nutricionista site profissional, nutricionista Google, site nutricionista WhatsApp">
+    <title>Site Profissional para Nutricionistas | Atraia Mais Pacientes</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #1a2332 0%, #2d3e50 100%);
+            color: #e8eef2;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            padding: 20px 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #4a9eff;
+        }
+
+        section {
+            padding: 60px 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 30px;
+            color: #4a9eff;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #c8d6e0;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        .hero h1 {
+            max-width: 900px;
+            margin: 0 auto 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #c8d6e0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #25d366;
+            color: #ffffff;
+        }
+
+        .btn-primary:hover {
+            background: #1fb855;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-secondary {
+            background: #0077b5;
+            color: #ffffff;
+            margin-left: 15px;
+        }
+
+        .btn-secondary:hover {
+            background: #006399;
+            transform: translateY(-2px);
+        }
+
+        .problem-section {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .problem-list {
+            max-width: 800px;
+            margin: 30px auto;
+        }
+
+        .problem-item {
+            background: rgba(74, 158, 255, 0.1);
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #4a9eff;
+            border-radius: 4px;
+        }
+
+        .solution-section {
+            text-align: center;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid rgba(74, 158, 255, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-5px);
+            border-color: #4a9eff;
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .step {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            background: #4a9eff;
+            color: #ffffff;
+            border-radius: 50%;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .authority-section {
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #4a9eff;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: #c8d6e0;
+        }
+
+        .about-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .cta-final {
+            text-align: center;
+            padding: 80px 0;
+            background: rgba(37, 211, 102, 0.1);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25d366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 35px;
+            height: 35px;
+            fill: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.6rem;
+            }
+
+            h3 {
+                font-size: 1.2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .hero {
+                padding: 50px 0;
+            }
+
+            .btn-secondary {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Site Profissional</div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Site Profissional para Nutricionistas que Querem Atrair Mais Pacientes</h1>
+            <div class="hero-subtitle">
+                Seja encontrada no Google, transmita confiança profissional, organize suas informações e prepare seus pacientes antes do primeiro contato no WhatsApp.
+            </div>
+            <a href="https://wa.me/5511999999999?text=Olá! Quero saber mais sobre o site profissional para nutricionistas." class="btn btn-primary">Quero meu site profissional</a>
+        </div>
+    </section>
+
+    <section class="problem-section">
+        <div class="container">
+            <h2>Por que sua presença online importa</h2>
+            <div class="problem-list">
+                <div class="problem-item">
+                    <h3>Pacientes pesquisam antes de marcar consulta</h3>
+                    <p>A primeira coisa que um paciente faz é pesquisar no Google. Se você não aparece ou não tem um site profissional, a confiança já começa comprometida.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Redes sociais não substituem um site</h3>
+                    <p>Instagram e Facebook são importantes, mas não transmitem a mesma credibilidade que um site profissional. Pacientes da área da saúde buscam seriedade e autoridade.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Falta de organização gera insegurança</h3>
+                    <p>Sem um lugar para centralizar suas informações profissionais, especialidades, formação e serviços, você perde oportunidades todos os dias.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>Nutricionistas sem site perdem autoridade</h3>
+                    <p>Um site profissional posiciona você como referência na sua área, aumenta sua presença no Google e facilita que pacientes qualificados te encontrem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution-section">
+        <div class="container">
+            <h2>O papel do site profissional para nutricionistas</h2>
+            <p>Um site profissional funciona como a base digital da sua atuação. Ele não substitui o WhatsApp, ele prepara o paciente para chegar até você mais consciente e qualificado.</p>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Apresentação profissional completa</h3>
+                    <p>Mostre sua formação, especialidades, abordagem e diferenciais de forma organizada e confiável.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">📍</div>
+                    <h3>Apoio para Google e Google Maps</h3>
+                    <p>Aumente suas chances de ser encontrada por pacientes que buscam nutricionistas na sua região.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔗</div>
+                    <h3>Link principal da bio das redes</h3>
+                    <p>Use o site como ponto central para direcionar seguidores do Instagram, Facebook e outras redes sociais.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">✅</div>
+                    <h3>Filtro que prepara o paciente</h3>
+                    <p>Quem chega no WhatsApp já conhece seu trabalho, suas especialidades e está mais preparado para o atendimento.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔍</div>
+                    <h3>Presença no Google Search</h3>
+                    <p>Apareça nos resultados quando pacientes pesquisarem por nutricionista na sua cidade ou especialidade.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">💼</div>
+                    <h3>Autoridade e credibilidade</h3>
+                    <p>Um site profissional transmite seriedade e diferencia você de profissionais sem presença digital estruturada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>O que você recebe com o site profissional</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h3>Mobile-first</h3>
+                    <p>Site pensado para funcionar perfeitamente no celular, onde seus pacientes mais acessam.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Estrutura focada em conversão</h3>
+                    <p>Design e conteúdo organizados para facilitar o contato via WhatsApp.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Botão de WhatsApp integrado</h3>
+                    <p>Seus pacientes podem entrar em contato direto com um clique.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Rápido e leve</h3>
+                    <p>Site otimizado para carregar rápido, mesmo em conexões mais lentas.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Seguro e estável</h3>
+                    <p>Infraestrutura confiável, sem surpresas ou instabilidades.</p>
+                </div>
+                <div class="benefit-card">
+                    <h3>Base preparada para SEO</h3>
+                    <p>Estrutura otimizada para que o Google encontre e indexe seu site corretamente.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="problem-section">
+        <div class="container">
+            <h2>Processo simples e direto</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Conversa inicial</h3>
+                    <p>Entendo suas necessidades, especialidades, público e como você quer ser apresentada.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Criação do site</h3>
+                    <p>Desenvolvo seu site profissional com foco em conversão e presença online.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Entrega e publicação</h3>
+                    <p>Seu site fica pronto para uso imediato nas redes sociais e no Google.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="authority-section">
+        <div class="container">
+            <h2>Experiência com profissionais de serviços</h2>
+            <p>Trabalho focado em soluções práticas que funcionam no dia a dia de profissionais como você.</p>
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Sites profissionais desenvolvidos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Mobile-first</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about-section">
+        <div class="container">
+            <h2>Quem cuida do seu site</h2>
+            <p>Sou o Victor, profissional de tecnologia com formação em Análise e Desenvolvimento de Sistemas, Engenharia de Software e Cibersegurança.</p>
+            <p>Isso significa que meus sites não são apenas bonitos: eles são estruturados, rápidos, seguros e pensados para funcionar bem no longo prazo.</p>
+            <p>Meu foco é criar presença online profissional para nutricionistas que precisam transmitir confiança, autoridade e facilitar o contato com pacientes, sem complicação técnica.</p>
+            <div style="margin-top: 30px;">
+                <a href="https://www.linkedin.com/in/seulinkedin" class="btn btn-secondary" target="_blank">Ver perfil profissional no LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container">
+            <h2>Fale comigo no WhatsApp e tenha seu site profissional para nutricionista</h2>
+            <p>Conversamos sobre suas necessidades e começo a construir sua presença online profissional.</p>
+            <a href="https://wa.me/5511999999999?text=Olá! Quero saber mais sobre o site profissional para nutricionistas." class="btn btn-primary">Entrar em contato agora</a>
+        </div>
+    </section>
+
+    <a href="https://wa.me/5511999999999?text=Olá! Quero saber mais sobre o site profissional para nutricionistas." class="whatsapp-float" aria-label="Contato WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 8.188-2.113c2.325 1.288 4.962 1.963 7.812 1.963 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.25c-2.462 0-4.875-0.663-6.988-1.913l-0.5-0.287-5.175 1.338 1.375-5.113-0.325-0.525c-1.362-2.175-2.087-4.7-2.087-7.3 0-7.512 6.113-13.625 13.625-13.625s13.625 6.113 13.625 13.625-6.113 13.8-13.625 13.8zM22.188 18.675c-0.387-0.2-2.288-1.125-2.638-1.25s-0.613-0.2-0.863 0.2c-0.25 0.387-0.975 1.25-1.2 1.5s-0.438 0.287-0.825 0.1c-0.387-0.2-1.637-0.6-3.125-1.913-1.15-1.025-1.925-2.288-2.15-2.675s-0.025-0.6 0.175-0.787c0.175-0.175 0.387-0.463 0.588-0.688s0.25-0.4 0.387-0.663c0.125-0.25 0.063-0.475-0.025-0.663s-0.863-2.1-1.188-2.875c-0.313-0.75-0.638-0.65-0.863-0.662-0.225-0.012-0.475-0.012-0.725-0.012s-0.663 0.1-1.013 0.475c-0.35 0.387-1.325 1.288-1.325 3.15s1.363 3.663 1.55 3.913c0.2 0.25 2.713 4.138 6.575 5.8 0.925 0.4 1.638 0.638 2.2 0.813 0.925 0.3 1.762 0.25 2.425 0.15 0.738-0.1 2.288-0.938 2.613-1.838s0.325-1.675 0.225-1.838c-0.1-0.175-0.35-0.275-0.738-0.475z"/>
+        </svg>
+    </a>
+</body>
+</html>
