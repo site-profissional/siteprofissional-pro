@@ -3,55 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <meta name="description" content="Criação de site profissional para advogados, médicos, nutricionistas, psicólogos e profissionais liberais. Site que transmite confiança, organiza sua presença online e transforma visitas em contatos reais no WhatsApp.">
     <meta name="keywords" content="site profissional, criação de site profissional, site para advogado, site para nutricionista, site para médico, site com WhatsApp, ser encontrado no Google">
+    
     <title>Site Profissional para Advogados, Médicos e Profissionais Liberais | Victor Tech</title>
+    
     <style>
+        /* RESET BÁSICO */
+        /* O asterisco seleciona TODOS os elementos da página */
         * {
             margin: 0;
             padding: 0;
+            /* box-sizing: border-box faz com que o padding não aumente o tamanho total dos elementos. 
+               Isso evita quebra de layout. */
             box-sizing: border-box;
         }
 
+        /* VARIÁVEIS DE CORES (:root) */
+        /* Aqui é o "painel de controle" das cores. Mude aqui e muda no site todo. */
         :root {
-            --bg-primary: #1a2332;
-            --bg-secondary: #243447;
-            --text-primary: #e8eef5;
-            --text-secondary: #b8c5d6;
-            --accent-blue: #4a9eff;
-            --cta-green: #10b981;
-            --cta-green-hover: #059669;
-            --linkedin-blue: #0a66c2;
+            --bg-primary: #1a2332;       /* Fundo principal (mais escuro) */
+            --bg-secondary: #243447;     /* Fundo secundário (para seções alternadas) */
+            --text-primary: #e8eef5;     /* Texto principal (quase branco) */
+            --text-secondary: #b8c5d6;   /* Texto secundário (cinza claro) */
+            --accent-blue: #4a9eff;      /* Azul de destaque (títulos menores, detalhes) */
+            --cta-green: #10b981;        /* Verde do botão de ação */
+            --cta-green-hover: #059669;  /* Verde do botão quando passa o mouse */
+            --linkedin-blue: #0a66c2;    /* Azul oficial do LinkedIn */
         }
 
+        /* ESTILOS GERAIS DO CORPO */
         body {
+            /* Pilha de fontes moderna: tenta usar a fonte nativa do sistema operacional */
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
             background-color: var(--bg-primary);
             color: var(--text-primary);
-            line-height: 1.7;
-            overflow-x: hidden;
+            line-height: 1.7; /* Altura da linha para melhorar legibilidade */
+            overflow-x: hidden; /* Evita rolagem horizontal indesejada */
         }
 
+        /* CONTAINER CENTRAL */
+        /* Mantém o conteúdo centralizado e não deixa esticar demais em telas gigantes */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+            max-width: 1200px; /* Largura máxima do conteúdo */
+            margin: 0 auto;    /* Centraliza na tela */
+            padding: 0 20px;   /* Espaçamento lateral para não colar na borda do celular */
         }
 
-        /* Hero Section */
+        /* HERO SECTION (A primeira tela que aparece) */
         .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
+            min-height: 100vh; /* Ocupa 100% da altura da tela do dispositivo */
+            display: flex;     /* Usa Flexbox para alinhar itens */
+            align-items: center; /* Centraliza verticalmente */
             padding: 80px 0 60px;
+            /* Gradiente sutil no fundo */
             background: linear-gradient(135deg, #1a2332 0%, #243447 100%);
         }
 
         .hero-content {
-            text-align: center;
+            text-align: center; /* Texto centralizado */
         }
 
+        /* TÍTULO PRINCIPAL (H1) */
         h1 {
+            /* CLAMP: Técnica moderna de tipografia fluida. 
+               O texto terá no mínimo 28px, preferencialmente 6% da largura da tela, e no máximo 48px. */
             font-size: clamp(28px, 6vw, 48px);
             font-weight: 700;
             line-height: 1.3;
@@ -59,48 +76,54 @@
             color: var(--text-primary);
         }
 
+        /* Span dentro do H1 para destacar texto em azul */
         .hero h1 span {
             color: var(--accent-blue);
         }
 
+        /* SUBTÍTULO DA HERO */
         .subheadline {
             font-size: clamp(17px, 4vw, 20px);
             color: var(--text-secondary);
             margin-bottom: 40px;
-            max-width: 750px;
+            max-width: 750px; /* Limita a largura para não ficar uma linha muito longa difícil de ler */
             margin-left: auto;
             margin-right: auto;
             line-height: 1.6;
         }
 
+        /* BOTÃO DE AÇÃO (CTA) */
         .cta-button {
             display: inline-block;
             background-color: var(--cta-green);
             color: white;
             padding: 18px 40px;
-            border-radius: 8px;
-            text-decoration: none;
+            border-radius: 8px; /* Bordas arredondadas */
+            text-decoration: none; /* Remove o sublinhado do link */
             font-weight: 600;
             font-size: 18px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease; /* Suaviza a animação de hover */
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3); /* Sombra suave */
         }
 
+        /* EFEITO AO PASSAR O MOUSE NO BOTÃO */
         .cta-button:hover {
             background-color: var(--cta-green-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4);
+            transform: translateY(-2px); /* O botão sobe levemente */
+            box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4); /* A sombra aumenta */
         }
 
-        /* Section Styles */
+        /* CONFIGURAÇÕES GERAIS DAS SEÇÕES */
         section {
-            padding: 80px 0;
+            padding: 80px 0; /* Espaçamento interno vertical */
         }
 
+        /* SEÇÃO COM FUNDO MAIS CLARO (Para dar contraste) */
         .section-dark {
             background-color: var(--bg-secondary);
         }
 
+        /* TÍTULOS H2 */
         h2 {
             font-size: clamp(26px, 5vw, 38px);
             margin-bottom: 24px;
@@ -112,6 +135,7 @@
             text-align: center;
         }
 
+        /* TÍTULOS H3 */
         h3 {
             font-size: clamp(20px, 4vw, 24px);
             margin-bottom: 12px;
@@ -119,6 +143,7 @@
             font-weight: 600;
         }
 
+        /* PARÁGRAFOS GERAIS */
         p {
             color: var(--text-secondary);
             margin-bottom: 20px;
@@ -131,25 +156,27 @@
             margin: 0 auto;
         }
 
-        /* Awareness Section */
+        /* GRID DE "CONSCIENTIZAÇÃO" (Bloco de Dor) */
         .awareness-grid {
-            display: grid;
-            gap: 28px;
+            display: grid; /* Cria um grid */
+            gap: 28px;     /* Espaço entre os itens */
             margin-top: 40px;
+            /* Por padrão, mobile é 1 coluna (definido implicitamente). 
+               Nas media queries lá embaixo definimos 2 colunas para desktop. */
         }
 
         .awareness-item {
-            background-color: rgba(255, 255, 255, 0.04);
+            background-color: rgba(255, 255, 255, 0.04); /* Fundo translúcido */
             padding: 28px;
             border-radius: 8px;
-            border-left: 4px solid var(--accent-blue);
+            border-left: 4px solid var(--accent-blue); /* Linha azul na esquerda */
         }
 
         .awareness-item h3 {
             margin-bottom: 16px;
         }
 
-        /* Role Section */
+        /* GRID DE "PAPEL DO SITE" */
         .role-grid {
             display: grid;
             gap: 24px;
@@ -168,8 +195,9 @@
             margin-bottom: 12px;
         }
 
+        /* ITEM DE DESTAQUE (Aquele box verde diferente) */
         .role-highlight {
-            background-color: rgba(16, 185, 129, 0.1);
+            background-color: rgba(16, 185, 129, 0.1); /* Fundo verde translúcido */
             border-left-color: var(--cta-green);
             margin-top: 32px;
         }
@@ -178,7 +206,7 @@
             color: var(--cta-green);
         }
 
-        /* Solution */
+        /* SOLUÇÃO */
         .solution-content {
             max-width: 850px;
             margin: 0 auto;
@@ -188,7 +216,7 @@
             font-size: clamp(17px, 3.5vw, 19px);
         }
 
-        /* Benefits */
+        /* GRID DE BENEFÍCIOS */
         .benefits-grid {
             display: grid;
             gap: 24px;
@@ -207,7 +235,7 @@
             margin-bottom: 12px;
         }
 
-        /* Process */
+        /* PROCESSO (Passo a passo) */
         .process-grid {
             display: grid;
             gap: 32px;
@@ -218,23 +246,24 @@
         }
 
         .process-step {
-            display: flex;
+            display: flex; /* Flexbox para colocar número ao lado do texto */
             gap: 20px;
             align-items: flex-start;
         }
 
+        /* Círculo com número */
         .step-number {
             background-color: var(--accent-blue);
             color: white;
             width: 48px;
             height: 48px;
-            border-radius: 50%;
+            border-radius: 50%; /* Faz virar círculo */
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 24px;
             font-weight: 700;
-            flex-shrink: 0;
+            flex-shrink: 0; /* Garante que o círculo não esmague */
         }
 
         .step-content h3 {
@@ -242,7 +271,7 @@
             font-size: 20px;
         }
 
-        /* Authority */
+        /* AUTORIDADE (Números) */
         .authority-stats {
             display: grid;
             gap: 24px;
@@ -268,7 +297,7 @@
             font-size: 18px;
         }
 
-        /* About Section */
+        /* SOBRE VOCÊ */
         .about-content {
             max-width: 850px;
             margin: 0 auto;
@@ -300,7 +329,7 @@
             transform: translateY(-1px);
         }
 
-        /* Final CTA */
+        /* CTA FINAL */
         .final-cta {
             text-align: center;
             padding: 100px 0;
@@ -315,9 +344,9 @@
             margin-bottom: 36px;
         }
 
-        /* Floating WhatsApp Button */
+        /* BOTÃO FLUTUANTE WHATSAPP */
         .whatsapp-float {
-            position: fixed;
+            position: fixed; /* Fica fixo na tela mesmo rolando */
             bottom: 24px;
             right: 24px;
             background-color: #25d366;
@@ -328,13 +357,13 @@
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
-            z-index: 1000;
+            z-index: 1000; /* Garante que fique acima de tudo */
             transition: all 0.3s ease;
             text-decoration: none;
         }
 
         .whatsapp-float:hover {
-            transform: scale(1.1);
+            transform: scale(1.1); /* Aumenta um pouco ao passar o mouse */
             box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
         }
 
@@ -344,32 +373,33 @@
             fill: white;
         }
 
-        /* Responsive */
+        /* RESPONSIVIDADE (MEDIA QUERIES) */
+        /* Tudo aqui dentro só se aplica se a tela for maior que 768px (Tablet/PC) */
         @media (min-width: 768px) {
             .awareness-grid,
             .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
             }
 
             .authority-stats {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr); /* 3 colunas */
             }
         }
 
+        /* Tudo aqui dentro só se aplica se a tela for maior que 1024px (Desktop) */
         @media (min-width: 1024px) {
             .benefits-grid {
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, 1fr); /* 3 colunas */
             }
 
             .role-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(2, 1fr); /* 2 colunas */
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -380,7 +410,6 @@
         </div>
     </section>
 
-    <!-- Awareness / Problem -->
     <section>
         <div class="container">
             <div class="content-wrapper">
@@ -409,7 +438,6 @@
         </div>
     </section>
 
-    <!-- Role of Website -->
     <section class="section-dark">
         <div class="container">
             <div class="content-wrapper">
@@ -441,7 +469,6 @@
         </div>
     </section>
 
-    <!-- Solution -->
     <section>
         <div class="container">
             <div class="solution-content">
@@ -452,7 +479,6 @@
         </div>
     </section>
 
-    <!-- Benefits -->
     <section class="section-dark section-center">
         <div class="container">
             <h2>O que você recebe</h2>
@@ -463,7 +489,7 @@
                 </div>
                 <div class="benefit-item">
                     <h3>Estrutura pensada para conversão</h3>
-                    <p>Cada seção e cada elemento posicionados estrategicamente para guiar o visitante até o contato pelo WhatsApp.</p>
+                    <p>Cada seção e cada elemento posicionados estrategicamente para guiar o visitante até o botão do WhatsApp.</p>
                 </div>
                 <div class="benefit-item">
                     <h3>Botão de WhatsApp integrado</h3>
@@ -493,7 +519,6 @@
         </div>
     </section>
 
-    <!-- Process -->
     <section class="section-center">
         <div class="container">
             <h2>Processo simples em 3 passos</h2>
@@ -523,7 +548,6 @@
         </div>
     </section>
 
-    <!-- Authority -->
     <section class="section-dark section-center">
         <div class="container">
             <h2>Experiência prática com resultados reais</h2>
@@ -544,7 +568,6 @@
         </div>
     </section>
 
-    <!-- About -->
     <section class="section-center">
         <div class="container">
             <h2>Quem cuida do seu site</h2>
@@ -561,7 +584,6 @@
         </div>
     </section>
 
-    <!-- Final CTA -->
     <section class="final-cta">
         <div class="container">
             <h2>Fale comigo no WhatsApp e tenha seu site profissional</h2>
@@ -570,7 +592,6 @@
         </div>
     </section>
 
-    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/5514998951657?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20site%20profissional" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
         <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.245 1.407 1.405-5.234-0.321-0.532c-1.355-2.24-2.062-4.787-2.062-7.413 0-7.72 6.28-14 14-14s14 6.28 14 14-6.28 14-14 14zM23.165 19.713c-0.206-0.104-1.216-0.6-1.405-0.668-0.189-0.067-0.326-0.104-0.464 0.104s-0.533 0.668-0.653 0.806c-0.121 0.138-0.241 0.155-0.447 0.052-0.206-0.104-0.87-0.321-1.656-1.022-0.612-0.545-1.025-1.219-1.145-1.425s-0.013-0.319 0.091-0.423c0.093-0.093 0.206-0.241 0.309-0.362s0.138-0.206 0.206-0.344c0.069-0.138 0.034-0.258-0.017-0.362s-0.464-1.118-0.636-1.531c-0.168-0.402-0.339-0.348-0.464-0.354-0.121-0.006-0.258-0.007-0.396-0.007s-0.362 0.052-0.551 0.258c-0.189 0.206-0.723 0.706-0.723 1.725s0.74 2.001 0.843 2.139c0.104 0.138 1.457 2.228 3.532 3.125 0.493 0.213 0.878 0.341 1.179 0.436 0.496 0.158 0.947 0.135 1.304 0.082 0.398-0.059 1.216-0.497 1.388-0.977s0.172-0.892 0.121-0.977c-0.052-0.086-0.189-0.138-0.396-0.241z"/>
