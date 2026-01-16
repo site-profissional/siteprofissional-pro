@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Criação de site profissional para advogados, médicos, nutricionistas, psicólogos e profissionais liberais. Site que transmite confiança, organiza sua presença online e transforma visitas em contatos reais no WhatsApp.">
+    <meta name="keywords" content="site profissional, criação de site profissional, site para advogado, site para nutricionista, site para médico, site com WhatsApp, ser encontrado no Google">
+    <title>Site Profissional para Advogados, Médicos e Profissionais Liberais | Victor Tech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #1a2332;
+            --bg-secondary: #243447;
+            --text-primary: #e8eef5;
+            --text-secondary: #b8c5d6;
+            --accent-blue: #4a9eff;
+            --cta-green: #10b981;
+            --cta-green-hover: #059669;
+            --linkedin-blue: #0a66c2;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 80px 0 60px;
+            background: linear-gradient(135deg, #1a2332 0%, #243447 100%);
+        }
+
+        .hero-content {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(28px, 6vw, 48px);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+        }
+
+        .hero h1 span {
+            color: var(--accent-blue);
+        }
+
+        .subheadline {
+            font-size: clamp(17px, 4vw, 20px);
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--cta-green);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: var(--cta-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-dark {
+            background-color: var(--bg-secondary);
+        }
+
+        h2 {
+            font-size: clamp(26px, 5vw, 38px);
+            margin-bottom: 24px;
+            color: var(--text-primary);
+            font-weight: 700;
+        }
+
+        .section-center h2 {
+            text-align: center;
+        }
+
+        h3 {
+            font-size: clamp(20px, 4vw, 24px);
+            margin-bottom: 12px;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            font-size: clamp(16px, 3vw, 18px);
+            line-height: 1.7;
+        }
+
+        .content-wrapper {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Awareness Section */
+        .awareness-grid {
+            display: grid;
+            gap: 28px;
+            margin-top: 40px;
+        }
+
+        .awareness-item {
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 28px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .awareness-item h3 {
+            margin-bottom: 16px;
+        }
+
+        /* Role Section */
+        .role-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .role-item {
+            background-color: rgba(74, 158, 255, 0.06);
+            padding: 28px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .role-item h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .role-highlight {
+            background-color: rgba(16, 185, 129, 0.1);
+            border-left-color: var(--cta-green);
+            margin-top: 32px;
+        }
+
+        .role-highlight h3 {
+            color: var(--cta-green);
+        }
+
+        /* Solution */
+        .solution-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .solution-content p {
+            font-size: clamp(17px, 3.5vw, 19px);
+        }
+
+        /* Benefits */
+        .benefits-grid {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .benefit-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 26px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-blue);
+        }
+
+        .benefit-item h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        /* Process */
+        .process-grid {
+            display: grid;
+            gap: 32px;
+            margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .process-step {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .step-number {
+            background-color: var(--accent-blue);
+            color: white;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .step-content h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        /* Authority */
+        .authority-stats {
+            display: grid;
+            gap: 24px;
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .stat-item {
+            background-color: rgba(255, 255, 255, 0.03);
+            padding: 36px 24px;
+            border-radius: 8px;
+        }
+
+        .stat-number {
+            font-size: clamp(40px, 8vw, 56px);
+            font-weight: 700;
+            color: var(--accent-blue);
+            margin-bottom: 12px;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 18px;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            background-color: rgba(255, 255, 255, 0.04);
+            padding: 36px;
+            border-radius: 8px;
+            margin-bottom: 32px;
+            line-height: 1.8;
+        }
+
+        .linkedin-button {
+            display: inline-block;
+            background-color: var(--linkedin-blue);
+            color: white;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .linkedin-button:hover {
+            opacity: 1;
+            transform: translateY(-1px);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, #243447 0%, #1a2332 100%);
+        }
+
+        .final-cta h2 {
+            margin-bottom: 24px;
+        }
+
+        .final-cta .subheadline {
+            margin-bottom: 36px;
+        }
+
+        /* Floating WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background-color: #25d366;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-float svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        /* Responsive */
+        @media (min-width: 768px) {
+            .awareness-grid,
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .authority-stats {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .role-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Site profissional que <span>transmite confiança</span>, organiza sua presença online e transforma visitas em contatos reais</h1>
+                <p class="subheadline">Criação de site profissional para advogados, médicos, nutricionistas, psicólogos e profissionais liberais. Seja encontrado no Google, apresente suas informações de forma profissional e prepare seus clientes antes do contato no WhatsApp.</p>
+                <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20site%20profissional" class="cta-button" target="_blank">Quero meu site profissional</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awareness / Problem -->
+    <section>
+        <div class="container">
+            <div class="content-wrapper">
+                <h2>Hoje, o cliente pesquisa antes de contratar</h2>
+                <p>Não importa a sua área de atuação: advogado, nutricionista, psicólogo, fisioterapeuta, dentista ou qualquer outro profissional liberal. Antes de entrar em contato, seu potencial cliente vai procurar seu nome no Google.</p>
+                <p>E o que ele encontra determina se você vai receber uma mensagem ou se ele vai escolher seu concorrente.</p>
+            </div>
+            <div class="awareness-grid">
+                <div class="awareness-item">
+                    <h3>Sem site ou com site amador</h3>
+                    <p>Quando o cliente pesquisa seu nome e não encontra um site profissional, ele interpreta isso como falta de estrutura, credibilidade ou seriedade. Em um mercado competitivo, isso elimina você da lista antes mesmo do contato.</p>
+                </div>
+                <div class="awareness-item">
+                    <h3>Redes sociais não substituem um site</h3>
+                    <p>Instagram e Facebook são importantes, mas você não tem controle sobre elas. Um site profissional é seu patrimônio digital, totalmente seu, e funciona como sua base central na internet.</p>
+                </div>
+                <div class="awareness-item">
+                    <h3>Perda de controle da própria imagem</h3>
+                    <p>Sem um site, você depende de como terceiros apresentam seu trabalho. Com um site profissional, você controla sua narrativa, suas informações e a impressão que causa.</p>
+                </div>
+                <div class="awareness-item">
+                    <h3>Desconfiança do cliente</h3>
+                    <p>Profissionais com presença digital organizada transmitem mais segurança. Quem não tem site perde oportunidades para quem parece mais estabelecido, mesmo que tenha menos experiência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Role of Website -->
+    <section class="section-dark">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2>O papel do site no seu negócio</h2>
+                <p>Um site profissional não é apenas uma página bonita na internet. Ele é uma ferramenta estratégica que trabalha para você 24 horas por dia.</p>
+            </div>
+            <div class="role-grid">
+                <div class="role-item">
+                    <h3>Cartão de visitas digital</h3>
+                    <p>Seu site é o primeiro ponto de contato profissional. Ele apresenta quem você é, o que faz e como você pode ajudar de forma clara e organizada.</p>
+                </div>
+                <div class="role-item">
+                    <h3>Central de informações</h3>
+                    <p>Todas as suas informações profissionais em um só lugar: serviços, formação, especialidades, formas de contato. Seu cliente encontra tudo sem esforço.</p>
+                </div>
+                <div class="role-item">
+                    <h3>Base para Google e Google Maps</h3>
+                    <p>Ter um site profissional aumenta suas chances de ser encontrado no Google e fortalece sua presença no Google Maps, essencial para profissionais que atendem localmente.</p>
+                </div>
+                <div class="role-item">
+                    <h3>Link para bio de redes sociais</h3>
+                    <p>Seu site profissional é o destino perfeito para o link da bio no Instagram, LinkedIn e outras redes. Direciona seguidores para sua presença central e controlada.</p>
+                </div>
+            </div>
+            <div class="role-item role-highlight">
+                <h3>Preparação do cliente para o contato</h3>
+                <p>Este é o grande diferencial: quando o cliente chega no seu WhatsApp, ele já conhece você, já entendeu seus serviços e já está mais qualificado. A conversa começa mais avançada, mais focada e com maior chance de fechamento.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section>
+        <div class="container">
+            <div class="solution-content">
+                <h2>A solução é um site profissional enxuto, rápido e focado em resultado</h2>
+                <p>Não é preciso complicar. Um site profissional bem estruturado resolve todos esses pontos: transmite confiança, organiza suas informações, prepara o cliente e facilita o contato.</p>
+                <p>Desenvolvido pensando primeiro no celular, porque é de onde seus clientes acessam. Rápido, seguro e pronto para trabalhar a seu favor desde o primeiro dia.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="section-dark section-center">
+        <div class="container">
+            <h2>O que você recebe</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>Site profissional mobile-first</h3>
+                    <p>Design moderno, limpo e pensado primeiro para celular, onde seus clientes realmente navegam e tomam decisões.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Estrutura pensada para conversão</h3>
+                    <p>Cada seção e cada elemento posicionados estrategicamente para guiar o visitante até o contato pelo WhatsApp.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Botão de WhatsApp integrado</h3>
+                    <p>Facilite o contato. Clientes interessados falam com você em um clique, direto no aplicativo que já usam todos os dias.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Site rápido e leve</h3>
+                    <p>Carregamento em segundos, sem espera. Isso melhora a experiência do visitante e ajuda no posicionamento no Google.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Estrutura segura e estável</h3>
+                    <p>Código limpo, otimizado e seguindo boas práticas de segurança. Seu site funcionando sem problemas, 24 horas por dia.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Base preparada para SEO</h3>
+                    <p>Estrutura técnica otimizada para ser encontrado no Google, com boas práticas de SEO desde o início.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Pronto para bio de redes sociais</h3>
+                    <p>Link ideal para Instagram, LinkedIn e outras redes. Direcione seus seguidores para sua presença profissional centralizada.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Entrega completa e funcional</h3>
+                    <p>Você recebe tudo configurado e pronto para uso. É só divulgar e começar a receber contatos mais qualificados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section-center">
+        <div class="container">
+            <h2>Processo simples em 3 passos</h2>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Conversa rápida para entender você</h3>
+                        <p>Conversamos no WhatsApp sobre sua área de atuação, seus diferenciais, o que você quer destacar e como seus clientes devem entrar em contato.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Criação do site profissional</h3>
+                        <p>Desenvolvo seu site com design moderno, estrutura de conversão e foco total em mobile. Tudo pensado para o seu público e sua área.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Entrega pronta para uso</h3>
+                        <p>Você recebe seu site completo, funcional e pronto para divulgar. Começa a transmitir autoridade e receber contatos mais preparados imediatamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Authority -->
+    <section class="section-dark section-center">
+        <div class="container">
+            <h2>Experiência prática com resultados reais</h2>
+            <div class="authority-stats">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Sites profissionais desenvolvidos</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Foco em profissionais liberais</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Seu site trabalhando por você</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="section-center">
+        <div class="container">
+            <h2>Quem cuida do seu site</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sou o Victor, profissional de tecnologia com formação em Análise e Desenvolvimento de Sistemas, Engenharia de Software e Cibersegurança.</p>
+                    <p>Isso significa que meus sites não são apenas bonitos: eles são estruturados, rápidos, seguros e pensados para funcionar bem no longo prazo.</p>
+                    <p>Meu foco é criar presença online profissional para quem precisa transmitir confiança, autoridade e facilitar o contato com clientes, sem complicação técnica.</p>
+                </div>
+                <div style="text-align: center;">
+                    <a href="https://linkedin.com/in/seu-perfil" class="linkedin-button" target="_blank">Ver perfil profissional no LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Fale comigo no WhatsApp e tenha seu site profissional</h2>
+            <p class="subheadline">Dê o próximo passo para ser encontrado no Google, transmitir mais autoridade, organizar sua presença online e receber contatos mais preparados para fechar.</p>
+            <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20site%20profissional" class="cta-button" target="_blank">Começar agora pelo WhatsApp</a>
+        </div>
+    </section>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5511999999999?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20site%20profissional" class="whatsapp-float" target="_blank" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.737 5.607 2.137 8.048l-2.137 7.952 7.933-2.127c2.42 1.37 5.173 2.127 8.067 2.127 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.467c-2.482 0-4.908-0.646-7.07-1.87l-0.507-0.292-5.245 1.407 1.405-5.234-0.321-0.532c-1.355-2.24-2.062-4.787-2.062-7.413 0-7.72 6.28-14 14-14s14 6.28 14 14-6.28 14-14 14zM23.165 19.713c-0.206-0.104-1.216-0.6-1.405-0.668-0.189-0.067-0.326-0.104-0.464 0.104s-0.533 0.668-0.653 0.806c-0.121 0.138-0.241 0.155-0.447 0.052-0.206-0.104-0.87-0.321-1.656-1.022-0.612-0.545-1.025-1.219-1.145-1.425s-0.013-0.319 0.091-0.423c0.093-0.093 0.206-0.241 0.309-0.362s0.138-0.206 0.206-0.344c0.069-0.138 0.034-0.258-0.017-0.362s-0.464-1.118-0.636-1.531c-0.168-0.402-0.339-0.348-0.464-0.354-0.121-0.006-0.258-0.007-0.396-0.007s-0.362 0.052-0.551 0.258c-0.189 0.206-0.723 0.706-0.723 1.725s0.74 2.001 0.843 2.139c0.104 0.138 1.457 2.228 3.532 3.125 0.493 0.213 0.878 0.341 1.179 0.436 0.496 0.158 0.947 0.135 1.304 0.082 0.398-0.059 1.216-0.497 1.388-0.977s0.172-0.892 0.121-0.977c-0.052-0.086-0.189-0.138-0.396-0.241z"/>
+        </svg>
+    </a>
+
+</body>
+</html>
